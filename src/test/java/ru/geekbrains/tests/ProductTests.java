@@ -32,7 +32,7 @@ public class ProductTests extends BaseTest{
 
     @SneakyThrows
     @AfterEach
-    void getIdProduct1() {
+    void getIdProduct() {
         Response<Product> response = productService.getProduct(idProduct).execute();
         assertThat(response.body().getId(), equalTo(idProduct));
         assertThat(response.isSuccessful(), CoreMatchers.is(true));
